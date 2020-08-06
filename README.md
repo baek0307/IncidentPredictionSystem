@@ -7,16 +7,17 @@
 
 ## 2. 팀 소개
 
+<!--
 <img src =./pic/장현.jpg width="20%" height="20%">
-
+-->
 -김건주
 ````
 * 역할: 팀장
 * Email: 
 ````
-
+<!--
 <img src =./pic/장현.jpg width="20%" height="20%">
-
+-->
 -허준영
 ````
 * 역할:  
