@@ -25,7 +25,7 @@
 ````
 
 
-<img src =./pic/장현.jpg width="20%" height="20%">
+<img src =./picture/baek.jpg width="20%" height="20%">
 
 -백장현
 ````
