@@ -8,16 +8,16 @@
 ## 2. 팀 소개
 
 
-<img src =./pic/장현.jpg width="20%" height="20%">
+<img src =./picture/건주.jpg width="20%" height="20%">
 
 -김건주
 ````
 * 역할: 팀장
 * Email: 
 ````
-<!--
-<img src =./pic/장현.jpg width="20%" height="20%">
--->
+
+<img src =./picture/준영.png width="20%" height="20%">
+
 -허준영
 ````
 * 역할:  
@@ -25,7 +25,7 @@
 ````
 
 
-<img src =./picture/baek.jpg width="20%" height="20%">
+<img src =./picture/장현.jpg width="20%" height="20%">
 
 -백장현
 ````
