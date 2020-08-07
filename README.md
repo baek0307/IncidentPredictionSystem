@@ -20,8 +20,8 @@
 
 -허준영
 ````
-* 역할:  
-* Email: 
+* 역할:  팀원
+* Email: jass9869@naver.com
 ````
 
 
