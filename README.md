@@ -13,7 +13,7 @@
 -김건주
 ````
 * 역할: 팀장
-* Email: 
+* Email: kimbatt12@naver.com
 ````
 
 <img src =./picture/준영.png width="20%" height="20%">
