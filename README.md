@@ -3,12 +3,20 @@
 ==================
 
 ## 1. 프로젝트 소개
+<img src =./picture/프로젝트소개.png width="60%" height="60%">
+
+
+대한민국은 골목길이 많고 불법주정차로 가득찬 도로가 만연하다. 운전자가 아무리 조심하더라도 사각지대에서 튀어나오는 여러 위험요소를 모두 피하기란 불가능에 가깝다. 본 프로젝트는 골목길 및 구조물에 가려져 시야가 제한되는경우, 주변 CCTV들이 검출한 위험요소(보행자 및 이륜차 등)정보를 받아와 사각지대에 존재하는 위험요소의 예측 이동경로와 속도를 운전자에게 알려주어 사고를 예방하는 것을 목적으로 한다.   
+
 
 
 ## 2. 팀 소개
 
 
 <img src =./picture/건주.jpg width="20%" height="20%">
+
+### 소개영상
+
 
 -김건주
 ````
@@ -38,7 +46,18 @@
 
 ## 3. Abstract
 
-If you look at the profile picture or SNS of a friend who has been on a trip, you can easily find the pictures taken with the background of the wonderful scenery, a good restaurant or special place. You will also be familiar with the way people who has been on a pleasant trip bragged about it and encouraged you to visit there because it's a good place. Humans have a desire to share good experiences with people around them, such as visiting great places. In view of this, our team decided to develop an application to create a platform where individuals can share their own places with friends and give them missions or hold events.
+In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
+
+
+## 4. Hardware Structure & Sequence Diagram
+
+   ### Hardware Structure
+   <img src =./picture/하드웨어구성도_v2.png width="40%" height="40%">
+
+
+   ### Sequence Diagram
+   <img src =./picture/시퀀스다이어그램_v2.png width="40%" height="40%">
+
 
 
 ### 개발 언어
@@ -47,9 +66,7 @@ If you look at the profile picture or SNS of a friend who has been on a trip, yo
    
 ### 주요 라이브러리 
    
-### 서버 프로세스
- 
-### 데이터베이스
+
   
 <!--
 ## 4. 기타
