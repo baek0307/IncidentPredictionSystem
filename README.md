@@ -10,13 +10,11 @@
 
 
 
+
 ## 2. 팀 소개
 
 
 <img src =./picture/건주.jpg width="20%" height="20%">
-
-### 소개영상
-
 
 -김건주
 ````
@@ -49,14 +47,22 @@
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
 
 
+
+
 ## 4. Hardware Structure & Sequence Diagram
+
 
    ### Hardware Structure
    <img src =./picture/하드웨어구성도_v2.png width="40%" height="40%">
 
 
+
    ### Sequence Diagram
    <img src =./picture/시퀀스다이어그램_v2.png width="40%" height="40%">
+   
+   
+   
+## 시연영상 예시
 
 
 
