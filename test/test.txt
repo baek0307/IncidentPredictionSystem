@@ -1,7 +1,0 @@
-이건 테스트입니다
-
-우분투 - 깃허브 연동을 위한 테스트입니다
-
-test test test
-
-test for connection with git
