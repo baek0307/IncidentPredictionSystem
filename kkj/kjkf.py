@@ -109,7 +109,7 @@ if __name__ == '__main__':
         cv2.waitKey()
         cv2.destroyAllWindows()
 
-    def InRange(num, min, max):
+    def InRange(num, min, max):State(position, velocity) filtering & Predict collision
         if(min>num):
             return False
         elif(max<num):
