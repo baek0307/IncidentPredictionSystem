@@ -37,7 +37,7 @@
 
 -백장현
 ````
-* 역할:  
+* 역할:  Github 관리 / 단안카메라를 이용한 object의 거리 검출 (darknet yolo 기반)
 * Email: qorwkdgus93@gmail.com
 ````
 
