@@ -1,4 +1,19 @@
 import cv2, numpy as np
+import copy
+from math import erf
+
+'''
+KjKalman is Rapping Class of cv2.KalmanFilter
+If you want to update state without sensor input, call KjKalman.PredictAndUpdate()
+Or with sensor -> call KjKalman.UpdateWithSensorInput(inputPosition[x,y])
+
+For predict probability of object1 & 2 call PredictCrash(object1, object2, distanceX, distanceY, threshHold=0.5, timeSlot=1, maxTime=5)
+object1 & 2 is KjKalman object
+distanceX and distanceY is x&y axis distance which is standard for collision prediction
+threshHold is minimum probability for deciding wether crash or not
+timeSlot is term of prediction time
+maxTime is end of prediction time
+'''
 
 #internal function / Do Not Call
 def XyToXyTNumpy(arr):
@@ -6,7 +21,7 @@ def XyToXyTNumpy(arr):
     return ret
 
 class KjKalman():
-    def __init__(self, pos, dt=0.1, r=10, q=1):#, pos):#=np.array([[0.],[0.]])):
+    def __init__(self, pos, dt=0.1, r=0.0001, q=0.001):#, pos):#=np.array([[0.],[0.]])):
         self.dt = dt
         self.r = r
         self.q = q
@@ -17,19 +32,7 @@ class KjKalman():
         self.kf.measurementNoiseCov = np.array([[1,0],[0,1]],np.float32) * r#R: decrease covarient with measurement
         self.kf.errorCovPost = 1. * np.ones((2, 2))#P init
         self.kf.statePre = np.array([[pos[0]], [pos[1]], [0], [1]], dtype=np.float32)
-        self.kf.correct(XyToXyTNumpy(pos))
-
-    #State Matrix after time sec / return [x, y, vx, vy]
-    def StateAfterNSec(self, time):
-        currentTime = float(0)
-        x = self.kf.statePost
-        #p = self.kf.errorCovPost        
-        while currentTime < time:
-            x = np.matmul(self.kf.transitionMatrix, x)
-            #p = np.matmul(self.kf.transitionMatrix, p)
-            #p = np.matmul(p, self.kf.transitionMatrix.transpose()) + self.kf.processNoiseCov
-            currentTime += self.dt
-        return x#,p      
+        self.kf.correct(XyToXyTNumpy(pos))   
 
     #Predict next state and update kf.statepre, kf.statepost / return predicted state
     def PredictAndUpdate(self):
@@ -39,64 +42,54 @@ class KjKalman():
     def UpdateWithSensorInput(self, pos):
         return self.kf.correct(XyToXyTNumpy(pos))
 
-def CrashAfterNSec(a, b, d, timeslot=1, maxTime=5):
+    def copy(self):
+        ret = KjKalman([self.kf.statePost[0], self.kf.statePost[1]], self.dt, self.r, self.q)
+        ret.kf.errorCovPost = self.kf.errorCovPost
+        ret.kf.statePre = self.kf.statePre
+        ret.kf.statePost = self.kf.statePost  
+        return ret      
+
+#get 2 kjkf Object, x&y collision distance, threshhold of collision probability, timeslot, maxtime
+#return predicted crash time from now & probability / if no crash, return -1, -1
+def PredictCrash(object1, object2, distanceX, distanceY, threshHold=0.5, timeSlot=1, maxTime=5):
+    a = object1.copy()
+    b = object2.copy()
     currentTime = 0.
-    while currentTime < maxTime:
-        #aPos, aCov = a.PositionAfterNSec(currentTime)
-        #bPos, bCov = b.PositionAfterNSec(currentTime)
-        aPos = a.StateAfterNSec(currentTime)
-        bPos = b.StateAfterNSec(currentTime)
-        
-        xDistance = aPos[0] - bPos[0]
-        yDistance = aPos[1] - bPos[1]
-        DistanceSquare = xDistance * xDistance + yDistance * yDistance
-        #xSigmaSquare = (aCov[0][0] * bCov[0][0]) / (aCov[0][0] + bCov[0][0])
-        #ySigmaSquare = (aCov[1][1] * bCov[1][1]) / (aCov[1][1] + bCov[1][1])
-        if (d * d) > DistanceSquare:
-            #xSigmaSquare = (aCov[0][0] * bCov[0][0]) / (aCov[0][0] + bCov[0][0])
-            #ySigmaSquare = (aCov[1][1] * bCov[1][1]) / (aCov[1][1] + bCov[1][1])
-            #xColisionProbability = 1 / np.sqrt(xSigmaSquare * 2 * np.pi)
-            #yColisionProbability = 1 / np.sqrt(ySigmaSquare * 2 * np.pi)
-            return currentTime, #xColisionProbability * yColisionProbability
-        currentTime += timeslot
-    return -1#, -1
+    aCurrentTime = 0.
+    bCurrentTime = 0.
+    while currentTime <= maxTime:
+        while aCurrentTime <= currentTime:
+            a.PredictAndUpdate()
+            aCurrentTime += a.dt
+        while bCurrentTime <= currentTime:
+            b.PredictAndUpdate()
+            bCurrentTime += b.dt
+        collisionProbability = CollisionProbability(a,b,distanceX,distanceY)
+        if collisionProbability > threshHold:
+            return currentTime, collisionProbability
+        currentTime += timeSlot
+    return -1, -1
 
-
-#all inputs are float
-def tmpFunc(accuracy, distance, meanDifference, sigma):
-    maxSum = 0
-    maxX = (distance - meanDifference) / sigma
-    maxTmp = maxX
-
-    minSum = 0
-    minX = ((-1.)*distance - meanDifference) / sigma
-    minTmp = minX
-
-    print("\n{} ~ {}".format(minX, maxX))
-    for i in range(1, int(accuracy)+1):
-        maxSum += maxTmp
-        maxTmp = (-1.) * maxTmp * maxX * maxX / i / 2. / (2.*float(i)+1.) * (2.*float(i)-1.)
-        minSum += minTmp
-        minTmp = (-1.) * minTmp * minX * minX / i / 2. / (2.*float(i)+1.) * (2.*float(i)-1.)
-
-    return (maxSum-minSum) / np.sqrt(2. * np.pi)
-        
 
 #Calculate Probavility of Collision(object1 and object2)
 #return predicted collision time from current and probability, if not crash return -1, -1
-def CollisionProbability(object1,object2,distanceX, distanceY,timeslot=1, maxTime=5):
-    xCollisionProbability = tmpFunc(4, 1, object1.kf.statePost[0] - object2.kf.statePost[0],
-				np.sqrt(object1.kf.errorCovPost[0][0] + object2.kf.errorCovPost[0][0]))
-    yCollisionProbability = tmpFunc(4, 1, object1.kf.statePost[1] - object2.kf.statePost[1],
-				np.sqrt(object1.kf.errorCovPost[1][1] + object2.kf.errorCovPost[1][1]))
-    CollisionProbability = xCollisionProbability * yCollisionProbability
-    print(CollisionProbability)
-    return CollisionProbability
+def CollisionProbability(object1,object2,distanceX, distanceY):
+    xSigmaSquare = object1.kf.errorCovPost[0][0] + object2.kf.errorCovPost[0][0]
+    xCollisionProbability = (
+				erf((distanceX - object1.kf.statePost[0] + object2.kf.statePost[0]) / np.sqrt(2*xSigmaSquare))
+				- erf((-1.*distanceX - object1.kf.statePost[0] + object2.kf.statePost[0]) / np.sqrt(2*xSigmaSquare))
+			)/2.
+    ySigmaSquare = object1.kf.errorCovPost[1][1] + object2.kf.errorCovPost[1][1]
+    yCollisionProbability = (
+				erf((distanceY - object1.kf.statePost[1] + object2.kf.statePost[1]) / np.sqrt(2*xSigmaSquare))
+				- erf((-1.*distanceY - object1.kf.statePost[1] + object2.kf.statePost[1]) / np.sqrt(2*xSigmaSquare))
+			)/2.
+    return xCollisionProbability * yCollisionProbability
 
 #Excuted when $python3 kjkf.py
 if __name__ == '__main__':
     WINDOW_SIZE = 512
-    NOISE_SCALE = 10
+    NOISE_SCALE = 5
     BLUE = (255,0,0)
     WHITE = (255,255,255)
     RED = (0,0,255)
@@ -109,7 +102,7 @@ if __name__ == '__main__':
         cv2.waitKey()
         cv2.destroyAllWindows()
 
-    def InRange(num, min, max):State(position, velocity) filtering & Predict collision
+    def InRange(num, min, max):
         if(min>num):
             return False
         elif(max<num):
@@ -165,9 +158,8 @@ if __name__ == '__main__':
             bLine[i%2] = [int(CorrectedPos[0]), int(CorrectedPos[1])]
             cv2.line(image, (bLine[0][0], bLine[0][1]), (bLine[1][0], bLine[1][1]), BLUE, 1)
 
-        #collisionTime, collisionProbability = 1, CollisionProbability(a,b,10, 1, 0.1)
-        collisionTime = CrashAfterNSec(a,b,10,timeslot=0.1, maxTime=5)
-        text = "Crash after: {}".format(collisionTime)
+        collisionTime, collisionProbability = PredictCrash(a,b,10,10)
+        text = "Crash after: {}, Prob: {}".format(collisionTime, collisionProbability)
         print(text)
         textPos = WINDOW_SIZE//3
         cv2.rectangle(image, (textPos,0), (WINDOW_SIZE-1, 15), WHITE, -1)
