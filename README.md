@@ -20,7 +20,7 @@
 
 -김건주
 ````
-* 역할: Kalman Filter 구현 / Collision Risk model 구현 / Thread 관리 / 통합 TEST
+* 역할: Kalman Filter 구현 / Collision Risk model 구현 / Thread 관리 / 통합TEST
 * Email: kimbatt12@naver.com
 ````
 
@@ -28,7 +28,7 @@
 
 -허준영
 ````
-* 역할:  ROS 통신 구현 / PWM을 이용한 AEB 구현 / 통합 TEST / 보고서 작성
+* 역할:  ROS 통신 구현 / PWM을 이용한 AEB 구현 / 통합TEST / 보고서 작성
 * Email: jass9869@naver.com
 ````
 
@@ -37,7 +37,7 @@
 
 -백장현
 ````
-* 역할:  Github 관리 / 단안카메라를 이용한 object의 거리 검출(darknet yolo 기반) / DarkNet 네트워크 성능 비교 / 좌표 값 Calibration 구현
+* 역할:  Github 관리 / 단안카메라를 이용한 object의 거리 검출) / DarkNet 네트워크 성능 비교 / 좌표 값 Calibration 구현
 * Email: qorwkdgus93@gmail.com
 ````
 
@@ -69,11 +69,28 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 
 ### 개발 언어
-   
+````
+* C/C++
+* Python
+````
+
 ### 사용 프레임워크
+````
+* Ubuntu 18.04 LTS
+* OpenCV 3.4.0
+* Cuda 10.0
+* DarkNet Yolo3
+* NVIDIA Xavier AGX
+* NVIDIA Jetson Nano
+* ROS Melodic
+* Logitec HD USB Camera (1080p
+````
    
 ### 주요 라이브러리 
-   
+````
+* DarkNet Yolo3 / Yolo3 tiny / Yolo4 / Yolo4 tiny
+* Python
+````
 
   
 <!--
