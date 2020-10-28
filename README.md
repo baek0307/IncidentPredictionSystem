@@ -20,7 +20,7 @@
 
 -김건주
 ````
-* 역할: Kalman Filter 구현 / Collision Risk model 구현 / Thread 관리 / 통합TEST
+* 역할: Kalman Filter 구현/ Collision Risk model 구현/ Thread 관리/ 통합TEST
 * Email: kimbatt12@naver.com
 ````
 
@@ -28,7 +28,7 @@
 
 -허준영
 ````
-* 역할:  ROS 통신 구현 / PWM을 이용한 AEB 구현 / 통합TEST / 보고서 작성
+* 역할:  ROS 통신 구현/ PWM을 이용한 AEB 구현/ 통합TEST/ 보고서 작성
 * Email: jass9869@naver.com
 ````
 
@@ -37,7 +37,7 @@
 
 -백장현
 ````
-* 역할:  Github 관리 / 단안카메라를 이용한 object의 거리 검출) / DarkNet 네트워크 성능 비교 / 좌표 값 Calibration 구현
+* 역할:  Github 관리/ 단안카메라를 이용한 object의 거리 검출/ DarkNet 네트워크 성능 비교/ 좌표 값 Calibration 구현
 * Email: qorwkdgus93@gmail.com
 ````
 
