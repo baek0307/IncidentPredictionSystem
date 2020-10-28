@@ -72,7 +72,8 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 ````
 * C/C++
 * Python
-* 
+* Cuda
+* CMake
 ````
 
 ### 사용 프레임워크
