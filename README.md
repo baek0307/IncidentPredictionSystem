@@ -37,7 +37,7 @@
 
 -백장현
 ````
-* 역할:  Github 관리/ 단안카메라를 이용한 object의 거리 검출/ DarkNet 네트워크 성능 비교/ 좌표 값 Calibration 구현
+* 역할:  Github 관리/ 단안카메라를 이용한 object의 거리검출/ DarkNet 네트워크 성능비교/ 좌표값 Calibration 구현
 * Email: qorwkdgus93@gmail.com
 ````
 
@@ -72,6 +72,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 ````
 * C/C++
 * Python
+* 
 ````
 
 ### 사용 프레임워크
