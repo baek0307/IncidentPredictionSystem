@@ -30,10 +30,6 @@ rightVelocity = 0.
 
 robot = Robot()
 statusQueue = Queue()
-#########################################################
-mapImage = np.zeros((700,700, 3), dtype=uint8)
-fourcc = cv2.cv.CV_FOURCC(*'MP4V')
-##########################################################
 
 def CallBack(msg):
         #out data.py
@@ -49,14 +45,6 @@ def CallBack(msg):
     crashTime, crashProbability = PredictCrash(a, b, 350, 100, threshHold=0.5, timeSlot=1, maxTime=5)
     RosRobot(crashTime, crashProbability)
 
-###############################################################
-    global mapImage
-    aPos = (int(a.statePost[0]), int(a.statePost[1]))
-    cv2.circle(mapImage, aPos, 3, (128,128,255), -1)
-    bPos = (int(a.statePost[0]), int(a.statePost[1]))
-    cv2.circle(mapImage, bPos, 3, (128,255,128), -1)
-    
-###############################################################
 def RxListener():
     print('\n***ROS Ready***')
         #init node name, anonymous:duplication
