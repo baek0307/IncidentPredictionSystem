@@ -10,7 +10,7 @@
 <img src =./picture/newsgif.gif width="60%" height="60%">
 
 
--대한민국은 골목길이 많고 불법주정차로 가득찬 도로가 만연하다. 운전자가 아무리 조심하더라도 사각지대에서 튀어나오는 여러 위험요소를 모두 피하기란 불가능에 가깝다. 본 프로젝트는 골목길 및 구조물에 가려져 시야가 제한되는경우, 주변 CCTV들이 검출한 위험요소(보행자 및 이륜차 등)정보를 받아와 사각지대에 존재하는 위험요소의 예측 이동경로와 속도를 운전자에게 알려주어 사고를 예방하는 것을 목적으로 한다.   
+대한민국은 골목길이 많고 불법주정차로 가득찬 도로가 만연하다. 운전자가 아무리 조심하더라도 사각지대에서 튀어나오는 여러 위험요소를 모두 피하기란 불가능에 가깝다. 본 프로젝트는 골목길 및 구조물에 가려져 시야가 제한되는경우, 주변 CCTV들이 검출한 위험요소(보행자 및 이륜차 등)정보를 받아와 사각지대에 존재하는 위험요소의 예측 이동경로와 속도를 운전자에게 알려주어 사고를 예방하는 것을 목적으로 한다.   
 
 
 
@@ -19,7 +19,7 @@
 
 <img src =./picture/건주.jpg width="20%" height="20%">
 
--김건주
+김건주
 ````
 * 역할: Kalman Filter 구현/ Collision Risk model 구현/ Thread 관리/ 통합TEST
 * Email: kimbatt12@naver.com
@@ -27,7 +27,7 @@
 
 <img src =./picture/준영.png width="20%" height="20%">
 
--허준영
+허준영
 ````
 * 역할:  ROS 통신 구현/ PWM을 이용한 AEB 구현/ 통합TEST/ 보고서 작성
 * Email: jass9869@naver.com
@@ -35,7 +35,7 @@
 
 <img src =./picture/장현.jpg width="20%" height="20%">
 
--백장현
+백장현
 ````
 * 역할:  Github 관리/ 단안카메라를 이용한 object의 거리검출/ DarkNet 네트워크 성능비교/ 좌표값 Calibration 구현
 * Email: qorwkdgus93@gmail.com
@@ -86,7 +86,8 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
    ### A. Calibration Pixel to Global
    
-   #Theory
+   Theory
+   
    <img src =./picture/calibration.PNG width="60%" height="60%">
       
    ````
@@ -94,21 +95,29 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * Detect with YOLOv3 / YOLOv4
    ````
    
-   #Result
+   
+   Result
+   
    <img src =./picture/calibration_0.jpg width="60%" height="60%">
+
 
    ### B. Transform Geometry
    
-   #Theory
+   Theory
+   
    <img src =./picture/Transform_Geometry.PNG width="60%" height="60%">
    
-   #Result
+   
+   Result
+   
    <img src =./picture/data_xaviergif.gif width="60%" height="60%">
+   
    
    
    ### C. Calculate Crash Risk from Kalman Filter
    
-   #Kalamn Filter
+   Kalamn Filter
+   
    <img src =./picture/data_KF_gif.gif width="60%" height="60%">
    
    ````
@@ -116,7 +125,8 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * This module can predict Crash time and Crash Probability
    ````
    
-   #Result
+   
+   Result
    <img src =./picture/data_jetbot.png width="60%" height="60%">
 
 
