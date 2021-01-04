@@ -54,8 +54,14 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 
 
+## 4. Demonstration Video
 
-## 4. Hardware Structure & Sequence Diagram
+   <img src =./picture/viewgif.gif width="60%" height="60%">
+
+
+
+
+## 5. Hardware Structure & Sequence Diagram
 
 
    ### Hardware Structure
@@ -68,10 +74,6 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    
    
    
-## Demonstration Video
-
-   <img src =./picture/viewgif.gif width="60%" height="60%">
-
 
 ### Development Languages
 ````
