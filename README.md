@@ -5,7 +5,8 @@
 
 
 ## 1. Introducing Project
-<img src =./picture/프로젝트소개_v2.png width="60%" height="60%">
+
+<img src =./picture/newsgif.gif width="60%" height="60%">
 
 
 -대한민국은 골목길이 많고 불법주정차로 가득찬 도로가 만연하다. 운전자가 아무리 조심하더라도 사각지대에서 튀어나오는 여러 위험요소를 모두 피하기란 불가능에 가깝다. 본 프로젝트는 골목길 및 구조물에 가려져 시야가 제한되는경우, 주변 CCTV들이 검출한 위험요소(보행자 및 이륜차 등)정보를 받아와 사각지대에 존재하는 위험요소의 예측 이동경로와 속도를 운전자에게 알려주어 사고를 예방하는 것을 목적으로 한다.   
@@ -46,6 +47,9 @@
 
 ## 3. Project Abstracts
 
+<img src =./picture/프로젝트소개_v2.png width="60%" height="60%">
+
+
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
 
 
@@ -64,8 +68,9 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    
    
    
-## 시연영상 예시
+## Demonstration Video
 
+   <img src =./picture/viewgif.gif width="40%" height="40%">
 
 
 ### 개발 언어
