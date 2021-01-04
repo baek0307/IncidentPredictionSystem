@@ -167,7 +167,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 * NVIDIA Xavier AGX
 * NVIDIA Jetson Nano
 * ROS Melodic
-* Logitec HD USB Camera (1080p
+* Logitec HD USB Camera (1080p)
 ````
    
 ### Libraries
