@@ -29,7 +29,7 @@
 
 허준영
 ````
-* 역할:  ROS 통신 구현/ PWM을 이용한 AEB 구현/ 통합TEST/ 보고서 작성
+* 역할:  ROS 통신 구현/ PWM을 이용한 AEB 구현/ 통합TEST/ 보고서 작성/ 최종 마무리
 * Email: jass9869@naver.com
 ````
 
@@ -48,7 +48,6 @@
 
 <img src =./picture/프로젝트소개_v2.png width="50%" height="50%"> <img src =./picture/PRJ_TestBed.PNG width="40%" height="40%">
 
-PRJ_TestBed.PNG
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
 
 
@@ -58,6 +57,12 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 <img src =./picture/viewgif.gif width="60%" height="60%">
 
+````
+1. Person detected in blind spot
+2. Receive location information in real time
+3. Calculate the risk of collision with a person
+4. If collision risk is upper than 70% operate AEB
+````
 
 
 - - -
@@ -139,10 +144,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * Result
    
    <img src =./picture/data_jetbot.png width="60%" height="60%">
-   
-      
-
-
+        
 
 
 - - -
