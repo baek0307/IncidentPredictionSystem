@@ -65,17 +65,17 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 
    ### Hardware Structure
-   <img src =https://user-images.githubusercontent.com/69332997/103496738-a374fc00-4e82-11eb-9f26-6c76677e2de0.jpg width="40%" height="40%">
+   <img src =https://user-images.githubusercontent.com/69332997/103496738-a374fc00-4e82-11eb-9f26-6c76677e2de0.jpg width="50%" height="40%">
 
 
 
    ### Sequence Diagram
-   <img src =https://user-images.githubusercontent.com/69332997/103496741-a53ebf80-4e82-11eb-8a7e-c2278ed09e8a.JPG width="40%" height="40%">
+   <img src =https://user-images.githubusercontent.com/69332997/103496741-a53ebf80-4e82-11eb-8a7e-c2278ed09e8a.JPG width="50%" height="40%">
    
    
    
-   ### Sequence Diagram
-   <img src =./picture/시퀀스다이어그램_v3.png width="40%" height="40%">
+   ### Software Algorithm
+   <img src =./picture/시퀀스다이어그램_v3.png width="50%" height="40%">
    
    
    
