@@ -85,14 +85,19 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 
    ### A. Calibration Pixel to Global
+   <img src =./picture/calibration.PNG width="60%" height="60%">
+   <img src =./picture/calibration_0.jpg width="60%" height="60%">
 
    ### B. Transform Geometry
+   <img src =./picture/Transform_Geometry.png width="60%" height="60%">
+   <img src =./picture/data_xaviergif.gif width="60%" height="60%">
+   
    
    ### C. Calculate Crash Risk from Kalman Filter
    <img src =./picture/data_KF_gif.gif width="60%" height="60%">
    
    ````
-   * We can calculate Crash Risk using Kalman Filter
+   * We can calculate Crash Risk by Kalman Filter
    * This module can predict Crash time and Crash Probability
    ````
 
