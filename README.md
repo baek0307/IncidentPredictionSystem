@@ -109,10 +109,25 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    
    <img src =./picture/data_xaviergif.gif width="60%" height="60%">
    
-      
-   ### C. Predict Crash Risk from Kalman Filter
    
-   * Kalamn Filter
+   ### C. V2X by ROS
+   
+   * ROS rqt_graph
+   
+   <img src =./picture/ROS_rqtGraph.png width="60%" height="60%">
+   
+   ````
+   * Tx(2EA) send to Rx(1EA)
+   ````
+   
+   * Result
+   
+   <img src =./picture/ROS.PNG width="60%" height="60%">
+   
+   
+   ### D. Predict Crash Risk from Kalman Filter
+   
+   * Kalman Filter
    
    <img src =./picture/data_KF_gif.gif width="60%" height="60%">
    
@@ -126,20 +141,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    <img src =./picture/data_jetbot.png width="60%" height="60%">
    
       
-   ### D. V2X from ROS
-   
-   * ROS rqt_graph
-   
-   <img src =./picture/ROS_rqtGraph.png width="60%" height="60%">
-   
-   ````
-   * Tx(2EA) send to Rx(1EA)
-   ````
-   
-   
-   * Result
-   
-   <img src =./picture/ROS.PNG width="60%" height="60%">
+
 
 
 
