@@ -56,25 +56,21 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 - - -
 ## 4. Demonstration Video
 
-
-   <img src =./picture/viewgif.gif width="60%" height="60%">
+<img src =./picture/viewgif.gif width="60%" height="60%">
 
 
 
 - - -
 ## 5. Hardware Structure & Software Diagram
 
-
    ### A. Hardware Structure
-   <img src =https://user-images.githubusercontent.com/69332997/103496738-a374fc00-4e82-11eb-9f26-6c76677e2de0.jpg width="50%" height="40%">
-
+   <img src =./picture/시퀀스다이어그램_v1.jpg width="50%" height="40%">
 
 
    ### B. Sequence Diagram
-   <img src =https://user-images.githubusercontent.com/69332997/103496741-a53ebf80-4e82-11eb-8a7e-c2278ed09e8a.JPG width="50%" height="40%">
+   <img src =./picture/시퀀스다이어그램_v2.jpg width="50%" height="40%">
    
-   
-   
+      
    ### C. Software Algorithm
    <img src =./picture/시퀀스다이어그램_v3.png width="50%" height="40%">
    
@@ -82,7 +78,6 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 - - -
 ## 6. Software Modularity
-
 
    ### A. Calibration Pixel to Global
    
@@ -94,8 +89,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * Estimate diatance of detected object using mono-camera
    * Detect with YOLOv3 / YOLOv4
    ````
-   
-   
+      
    * Result
    
    <img src =./picture/calibration_0.jpg width="60%" height="60%">
@@ -111,13 +105,11 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * Transform the directions of all cameras in Cardinal Directions
    ````
    
-   
    * Result
    
    <img src =./picture/data_xaviergif.gif width="60%" height="60%">
    
-   
-   
+      
    ### C. Predict Crash Risk from Kalman Filter
    
    * Kalamn Filter
@@ -128,11 +120,26 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    * Calculate Crash Risk by Kalman Filter
    * This module can predict Crash time and Crash Probability
    ````
+      
+   * Result
+   
+   <img src =./picture/data_jetbot.png width="60%" height="60%">
+   
+      
+   ### D. Using ROS for V2X
+   
+   * ROS rqt_graph
+   
+   <img src =./picture/ROS_rqtGraph.png width="60%" height="60%">
+   
+   ````
+   * Tx(2EA) send to Rx(1EA)
+   ````
    
    
    * Result
    
-   <img src =./picture/data_jetbot.png width="60%" height="60%">
+   <img src =./picture/ROS.PNG width="60%" height="60%">
 
 
 
