@@ -46,7 +46,7 @@
 - - -
 ## 3. Project Abstracts
 
-<img src =./picture/프로젝트소개_v2.png width="50%" height="50%"> <img src =./picture/PRJ_TestBed.PNG width="30%" height="30%">
+<img src =./picture/프로젝트소개_v2.png width="50%" height="50%"> <img src =./picture/PRJ_TestBed.PNG width="35%" height="35%">
 
 PRJ_TestBed.PNG
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
@@ -65,7 +65,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 ## 5. Hardware Structure & Software Diagram
 
 
-   ### Hardware Structure
+   ### A. Hardware Structure
    <img src =https://user-images.githubusercontent.com/69332997/103496738-a374fc00-4e82-11eb-9f26-6c76677e2de0.jpg width="50%" height="40%">
 
 
