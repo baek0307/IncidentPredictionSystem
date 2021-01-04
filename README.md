@@ -68,7 +68,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 
 
    ### B. Sequence Diagram
-   <img src =./picture/시퀀스다이어그램_v2.jpg width="50%" height="40%">
+   <img src =./picture/시퀀스다이어그램_v2.JPG width="50%" height="40%">
    
       
    ### C. Software Algorithm
@@ -126,7 +126,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    <img src =./picture/data_jetbot.png width="60%" height="60%">
    
       
-   ### D. Using ROS for V2X
+   ### D. V2X from ROS
    
    * ROS rqt_graph
    
