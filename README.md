@@ -1,8 +1,7 @@
-- - -
 # IPS - Incident Prediction System
 
 ## 돌발상황 예측 시스템
-- - -
+
 
 - - -
 ## 1. Introducing Project
