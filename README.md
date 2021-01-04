@@ -107,6 +107,10 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    
    <img src =./picture/Transform_Geometry.PNG width="60%" height="60%">
    
+   ````
+   * Transform the directions of all cameras in Cardinal Directions
+   ````
+   
    
    Result
    
@@ -121,12 +125,13 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    <img src =./picture/data_KF_gif.gif width="60%" height="60%">
    
    ````
-   * We can calculate Crash Risk by Kalman Filter
+   * Calculate Crash Risk by Kalman Filter
    * This module can predict Crash time and Crash Probability
    ````
    
    
    Result
+   
    <img src =./picture/data_jetbot.png width="60%" height="60%">
 
 
