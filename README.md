@@ -3,7 +3,7 @@
 ## 돌발상황 예측 시스템
 
 
-
+- - -
 ## 1. Introducing Project
 
 <img src =./picture/newsgif.gif width="60%" height="60%">
@@ -13,7 +13,7 @@
 
 
 
-
+- - -
 ## 2. Team
 
 
@@ -44,7 +44,7 @@
 
 
 
-
+- - -
 ## 3. Project Abstracts
 
 <img src =./picture/프로젝트소개_v2.png width="50%" height="50%">
@@ -53,14 +53,14 @@
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
 
 
-
+- - -
 ## 4. Demonstration Video
 
    <img src =./picture/viewgif.gif width="60%" height="60%">
 
 
 
-
+- - -
 ## 5. Hardware Structure & Sequence Diagram
 
 
@@ -74,7 +74,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    
    
    
-
+- - -
 ### Development Languages
 ````
 * C/C++
