@@ -73,7 +73,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
    <img src =./picture/viewgif.gif width="60%" height="60%">
 
 
-### 개발 언어
+### Development Languages
 ````
 * C/C++
 * Python
@@ -81,7 +81,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 * CMake
 ````
 
-### 사용 프레임워크
+### Development Environment
 ````
 * Ubuntu 18.04 LTS
 * OpenCV 3.4.0
@@ -93,7 +93,7 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 * Logitec HD USB Camera (1080p
 ````
    
-### 주요 라이브러리 
+### Libraries
 ````
 * DarkNet Yolo3 / Yolo3 tiny / Yolo4 / Yolo4 tiny
 * Python
