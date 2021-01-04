@@ -3,6 +3,7 @@
 ## 돌발상황 예측 시스템
 
 
+
 - - -
 ## 1. Introducing Project
 
@@ -15,7 +16,6 @@
 
 - - -
 ## 2. Team
-
 
 <img src =./picture/건주.jpg width="20%" height="20%">
 
@@ -33,7 +33,6 @@
 * Email: jass9869@naver.com
 ````
 
-
 <img src =./picture/장현.jpg width="20%" height="20%">
 
 -백장현
@@ -47,14 +46,16 @@
 - - -
 ## 3. Project Abstracts
 
-<img src =./picture/프로젝트소개_v2.png width="50%" height="50%">
+<img src =./picture/프로젝트소개_v2.png width="50%" height="50%"><img src =./picture/PRJ_TestBed.PNG width="50%" height="50%">
 
-
+PRJ_TestBed.PNG
 In Korea, roads with many alleys and full of illegal parking are rampant. No matter how careful the driver is, it is almost impossible to avoid all the risk factors that pop out of the blind spot. The purpose of this project is to prevent accidents by informing the driver of the predicted path and speed of the risk factors in the blind spot by receiving information on the risk factors (walker, bicycle) detected by the CCTVs in the surrounding area when the visibility is restricted due to being hidden in alleys and structures. 
+
 
 
 - - -
 ## 4. Demonstration Video
+
 
    <img src =./picture/viewgif.gif width="60%" height="60%">
 
@@ -64,23 +65,35 @@ In Korea, roads with many alleys and full of illegal parking are rampant. No mat
 ## 5. Hardware Structure & Software Diagram
 
 
-   ### Hardware Structure
+   ### A. Hardware Structure
    <img src =https://user-images.githubusercontent.com/69332997/103496738-a374fc00-4e82-11eb-9f26-6c76677e2de0.jpg width="50%" height="40%">
 
 
 
-   ### Sequence Diagram
+   ### B. Sequence Diagram
    <img src =https://user-images.githubusercontent.com/69332997/103496741-a53ebf80-4e82-11eb-8a7e-c2278ed09e8a.JPG width="50%" height="40%">
    
    
    
-   ### Software Algorithm
+   ### C. Software Algorithm
    <img src =./picture/시퀀스다이어그램_v3.png width="50%" height="40%">
    
    
-   
+
 - - -
-## 6. Development Settings
+## 6. Software Modularity
+
+
+   ### A. Calibration Pixel to Global
+
+   ### B. Transform Geometry
+   
+   ### C. Calculate Crash Risk from Kalman Filter
+
+
+
+- - -
+## 7. Development Settings
 
 ### Development Languages
 ````
